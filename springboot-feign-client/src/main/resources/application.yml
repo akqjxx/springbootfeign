@@ -5,7 +5,8 @@ logging:
   level:
     org.apache.http.wire: trace
     org.apache.http.headers: trace
-debug: true
+    com.liujc.service.UserService: trace
+#debug: true
 spring:
   devtools:
     livereload:
