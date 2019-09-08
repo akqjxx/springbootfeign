@@ -31,7 +31,6 @@ hystrix:
       execution:
         timeout:
           enabled: false
-
 eureka:
   client:
     register-with-eureka: false
