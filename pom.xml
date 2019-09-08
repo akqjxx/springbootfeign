@@ -67,10 +67,10 @@
     </dependencyManagement>
 
     <modules>
-        <module>springboot-feign-server</module>
+        <module>springboot-feign-server-boss</module>
         <module>springboot-feign-client</module>
         <module>springboot-eureka-server</module>
-        <module>springboot-feign-server2</module>
+        <module>springboot-feign-server-ipcc</module>
         <module>springboot-service-api</module>
     </modules>
 

@@ -1,0 +1,23 @@
+server:
+  port: 9001
+logging:
+  level:
+    root: debug
+spring:
+  devtools:
+    livereload:
+      port: 55730
+  application:
+    name: springboot-feign-server-ipcc
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+
+  instance:
+    instance-id: springboot-feign-server-ipcc-9001
+    #访问路径可以显示IP地址
+    prefer-ip-address: true
+

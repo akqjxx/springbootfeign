@@ -1,5 +1,5 @@
 server:
-  port: 9001
+  port: 10001
 
 logging:
   level:
@@ -8,10 +8,17 @@ logging:
     com.liujc.service.UserService: trace
 #debug: true
 spring:
+  application:
+    name: springboot-feign-client
   devtools:
     livereload:
-      port: 35730
+      port: 15730
 
 feign:
   httpclient:
     enabled: true
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
