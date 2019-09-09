@@ -14,4 +14,8 @@ public class HouseController {
     public String getHouse(){
         return iBossHouseProxy.getHouse();
     }
+    @RequestMapping("/getHouse/list")
+    public String getHouseList(){
+        return iBossHouseProxy.getList();
+    }
 }

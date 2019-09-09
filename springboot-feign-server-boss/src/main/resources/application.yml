@@ -15,9 +15,11 @@ eureka:
       defaultZone: http://127.0.0.1:7001/eureka/
     fetch-registry: true
     register-with-eureka: true
-
+    registry-fetch-interval-seconds: 8
   instance:
     instance-id: springboot-feign-server-boss-8001
     #访问路径可以显示IP地址
     prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 4
+    lease-expiration-duration-in-seconds: 12
 

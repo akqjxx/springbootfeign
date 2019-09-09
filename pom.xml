@@ -24,6 +24,10 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
@@ -77,6 +81,7 @@
         <module>springboot-eureka-server</module>
         <module>springboot-feign-server-ipcc</module>
         <module>springboot-service-api</module>
+        <module>springboot-hystrix-dashboard</module>
     </modules>
 
 </project>

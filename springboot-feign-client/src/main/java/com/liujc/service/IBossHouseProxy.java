@@ -1,7 +1,8 @@
 package com.liujc.service;
 
+import com.liujc.service.fallback.IBossHouseProxyFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
 
-@FeignClient("springboot-feign-server-boss")
+@FeignClient(value = "springboot-feign-server-boss",fallbackFactory = IBossHouseProxyFallbackFactory.class)
 public interface IBossHouseProxy extends  IHouseServiceProxy{
 }

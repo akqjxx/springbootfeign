@@ -5,4 +5,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface IHouseServiceProxy {
     @RequestMapping("/getHouse")
     String getHouse();
+    @RequestMapping("getHouse/list")
+    String getList();
 }

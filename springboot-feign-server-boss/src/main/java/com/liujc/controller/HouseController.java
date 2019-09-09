@@ -11,4 +11,10 @@ public class HouseController implements IHouseServiceProxy {
     public String getHouse() {
         return "这是我的房子";
     }
+
+    @Override
+    public String getList() {
+        int i = 1/0;
+        return null;
+    }
 }

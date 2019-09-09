@@ -15,8 +15,13 @@ public class DeptController implements IDeptInfoServiceProxy {
     @RequestMapping("/dept/list")
     @Override
     public List<Dept> getList() {
+        if(System.currentTimeMillis() %2 ==0) {
+            throw new RuntimeException("随机错误");
+        }
+        if(1==1)
+        throw new RuntimeException("随机错误");
         try {
-            TimeUnit.SECONDS.sleep(4);
+            TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
