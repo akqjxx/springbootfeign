@@ -1,11 +1,17 @@
 server:
   port: 7001
+  servlet:
+    context-path: /
 spring:
+  zipkin:
+    base-url: http://localhost:9411
   application:
     name: springboot-eureka-server
 eureka:
   instance:
     hostname: 127.0.0.1 #eureka服务端的实例名称
+    statusPageUrlPath: ${server.servlet.context-path}/info
+    healthCheckUrlPath: ${server.servlet.context-path}/health
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 5000

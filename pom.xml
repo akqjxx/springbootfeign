@@ -72,6 +72,33 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>io.zipkin.java</groupId>
+                <artifactId>zipkin</artifactId>
+                <version>2.10.1</version>
+            </dependency>
+            <dependency>
+                <groupId>io.zipkin.java</groupId>
+                <artifactId>zipkin-server</artifactId>
+                <version>2.10.1</version>
+                <!--排除-->
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.logging.log4j</groupId>
+                        <artifactId>log4j-slf4j-impl</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>io.zipkin.java</groupId>
+                <artifactId>zipkin-autoconfigure-ui</artifactId>
+                <version>2.10.1</version>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
+                <version>2.1.0</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
@@ -94,6 +121,8 @@
         <module>springboot-feign-server-ipcc</module>
         <module>springboot-service-api</module>
         <module>springboot-hystrix-dashboard</module>
+        <module>springboot-zipkin-server</module>
+        <module>springboot-admin-server</module>
     </modules>
 
 </project>
